@@ -54,6 +54,8 @@ public class Config {
     public static final String FAIL_TO_LOGIN="fail_to_login";
     public static final String SUCCESS_TO_REGISTER="success_to_register";
     public static final String FAIL_TO_REGISTER="fail_to_register";
+    public static final String SUCCESS_TO_UPDATE="success_to_update";
+    public static final String FAIL_TO_UPDATE="fail_to_update";
 
 
 
@@ -83,6 +85,7 @@ public class Config {
     public static final String GETUSERCOLLECTION="getUserCollection";
     public static final String GETUSERIDBYACCOUNT="getUserIdByAccount";
     public static final String RECOMMENDFOODFORTHISUSER="recommendFoodForThisUser";
+    public static final String UPDATEUSERIFO="updateUserInfo";
 
 
 

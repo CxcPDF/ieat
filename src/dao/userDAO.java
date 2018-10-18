@@ -2,6 +2,7 @@ package dao;
 
 import bean.user;
 import net.sf.json.JSONObject;
+import sun.net.idn.Punycode;
 
 import java.sql.SQLException;
 
@@ -22,5 +23,7 @@ public interface userDAO {
 
 
     public int[] getFlavourById(String userId);//通过userId来获取用户的口味信息
+
+    public boolean updateUserInfo(JSONObject json);//更新用户信息
 
 }
