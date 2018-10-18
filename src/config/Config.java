@@ -56,6 +56,14 @@ public class Config {
     public static final String FAIL_TO_REGISTER="fail_to_register";
 
 
+
+
+    public static final String AVOIDFOOD="avoid_food";
+    public static final String SUITPEOPLE="suit_people";
+
+
+
+
     public static final String NICKNAME="nickName";
     public static final String HEIGHT="height";
     public static final String WEIGHT="weight";

@@ -27,6 +27,10 @@ import java.util.*;
 @WebServlet(name = "ParseJSONServlet")
 public class ParseJSONServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        request.setCharacterEncoding("UTF-8");
+        response.setCharacterEncoding("UTF-8");
+        response.setContentType("application/json;charset=UTF-8");
+
         response.getOutputStream().write("aaaa".getBytes());
         response.getOutputStream().write("你好，你已经成功访问到了服务器".getBytes());
 
@@ -122,8 +126,6 @@ public class ParseJSONServlet extends HttpServlet {
                 break;
             case Config.GETUSERCOLLECTION://获取用户收藏的菜品
                 getUserCollectionServlet getUserCollectionServlet=new getUserCollectionServlet(object);
-
-
                 responseJSON=getUserCollectionServlet.getResponse(request,response);
                 System.out.println(responseJSON.toString());
 

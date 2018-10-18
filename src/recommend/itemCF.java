@@ -15,15 +15,15 @@ import java.util.*;
 
 public class itemCF {
 
-    public static void main(String[] args){
-        itemCF itemCF=new itemCF();
-        List list=itemCF.getItem(5+"",452+"");
-        for (int i=0;i<list.size();i++){
-            System.out.println(list.get(i));
-        }
-
-        System.out.println(new Date().getTime());
-    }
+//    public static void main(String[] args){
+//        itemCF itemCF=new itemCF();
+//        List list=itemCF.getItem(5+"",452+"");
+//        for (int i=0;i<list.size();i++){
+//            System.out.println(list.get(i));
+//        }
+//
+//        System.out.println(new Date().getTime());
+//    }
 
 
     /**

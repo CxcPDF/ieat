@@ -9,6 +9,8 @@ public class user {
     public String userWeiChat;
     public String oauthAccessToken;
     public String type;
+    public String avoidFood;
+    public String suitPeople;
 
 
     public String getUserName() {
@@ -65,5 +67,21 @@ public class user {
 
     public void setType(String type) {
         this.type = type;
+    }
+
+    public String getAvoidFood() {
+        return avoidFood;
+    }
+
+    public void setAvoidFood(String avoidFood) {
+        this.avoidFood = avoidFood;
+    }
+
+    public String getSuitPeople() {
+        return suitPeople;
+    }
+
+    public void setSuitPeople(String suitPeople) {
+        this.suitPeople = suitPeople;
     }
 }

@@ -51,13 +51,18 @@ public class UserRegisterServlet extends HttpServlet {
 
 
 
-        String account = jsonObject.getString("account");
-        String password = jsonObject.getString("password");
+        String account = jsonObject.getString(Config.ACCOUNT);
+        String password = jsonObject.getString(Config.PASSWORD);
         String register_type = jsonObject.getString("register_type");//获取注册类型
+        String suit_people=jsonObject.getString(Config.SUITPEOPLE);//特殊人群
+        String avoid_food=jsonObject.getString(Config.AVOIDFOOD);//忌口食物
+
 
 
         user user = new user();
         user.setType(register_type);
+        user.setAvoidFood(avoid_food);
+        user.setSuitPeople(suit_people);
         user.setOauthAccessToken(password);
         switch (register_type) {
             case Config.TEL:

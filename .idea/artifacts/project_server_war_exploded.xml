@@ -1,0 +1,28 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="project_server:war exploded">
+    <output-path>$USER_HOME$/Desktop/pdf</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="project_server" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="file-copy" path="$PROJECT_DIR$/../jar package/c3p0-0.9.0.jar/c3p0-0.9.0.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/../jar package/json/apache-commons-lang.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/../jar package/json/commons-beanutils-core-1.8.0.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/../jar package/json/commons-collections-3.2.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/../jar package/json/commons-httpclient-3.1.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/../jar package/json/commons-lang-2.4-osgi.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/../jar package/json/commons-logging-1.1.3.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/../jar package/json/ezmorph-1.0.1.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/../jar package/json/ezmorph-1.0.6.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/../jar package/json/json-lib-2.4-jdk15.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/../jar package/json/org.apache.commons.beanutils.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/../jar package/mysql-connector-java-commercial-5.1.7-bin.jar/mysql-connector-java-commercial-5.1.7-bin.jar" />
+        </element>
+      </element>
+      <element id="library" level="project" name="src" />
+      <element id="javaee-facet-resources" facet="project_server/web/Web" />
+    </root>
+  </artifact>
+</component>

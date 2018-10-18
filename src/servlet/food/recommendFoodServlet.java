@@ -98,6 +98,10 @@ public class recommendFoodServlet extends HttpServlet {
             recommend.put(recommendList.get(i)+"",tmp);
         }
 
+        for (int i = 0; i <recommendList.size() ; i++) {
+            responseJSON.put("recommend",recommendList.get(i));
+        }
+
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

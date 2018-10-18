@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" build-on-make="true" name="project_server:war">
+    <output-path>$USER_HOME$/Desktop/pdf</output-path>
+    <root id="archive" name="project_server_war.war">
+      <element id="artifact" artifact-name="project_server:war exploded" />
+    </root>
+  </artifact>
+</component>

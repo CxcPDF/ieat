@@ -71,13 +71,13 @@ public class FoodClickServlet extends HttpServlet {
             System.out.println("用户行为插入成功！！！");
 //            responseJSON.put("notice","actionPre插入成功！");
             JSONObject jsonObject=new JSONObject();
-            jsonObject.put(Config.NOTICE,"插入成功！！");
+            jsonObject.put(Config.NOTICE,Config.SUCCESS);
             responseJSON=res.setResult(jsonObject.toString());
         }else {
             System.out.println("行为插入失败！！！");
 //            responseJSON.put("notice","actionPre插入失败！");
             JSONObject jsonObject=new JSONObject();
-            jsonObject.put(Config.NOTICE,"插入失败！！");
+            jsonObject.put(Config.NOTICE,Config.FAIL);
             responseJSON=res.setResult(jsonObject.toString());
         }
 
