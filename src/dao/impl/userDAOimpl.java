@@ -98,19 +98,22 @@ public class userDAOimpl implements userDAO {
         JSONObject json = new JSONObject();
 
         //获取用户的基本信息如昵称，身高，体重，年龄，性别等
-        String sql = "select nickName,height,weight,age,sex,account from user where userId=" + userId + ";";
+        String sql = "select nickName,height,weight,age,sex,account,suit_people,avoid_food from user where userId=" + userId + ";";
         try {
             ResultSet resultSet = sqlHelper.queryRs(sql, sqlHelper, connection);
 //            if (resultSet==null){
 //                return null;
 //            }
             while (resultSet.next()) {
-                json.put(Config.NICKNAME, resultSet.getString("nickName"));
-                json.put(Config.HEIGHT, resultSet.getInt("height"));
-                json.put(Config.WEIGHT, resultSet.getInt("weight"));
-                json.put(Config.AGE, resultSet.getInt("age"));
-                json.put(Config.SEX, resultSet.getString("sex"));
-                json.put(Config.ACCOUNT, resultSet.getString("account"));
+                json.put(Config.NICKNAME, resultSet.getString(Config.NICKNAME));
+                json.put(Config.HEIGHT, resultSet.getInt(Config.HEIGHT));
+                json.put(Config.WEIGHT, resultSet.getInt(Config.WEIGHT));
+                json.put(Config.AGE, resultSet.getInt(Config.AGE));
+                json.put(Config.SEX, resultSet.getString(Config.SEX));
+                json.put(Config.ACCOUNT, resultSet.getString(Config.ACCOUNT));
+                json.put(Config.SUITPEOPLE, resultSet.getString(Config.SUITPEOPLE));
+                json.put(Config.AVOIDFOOD, resultSet.getString(Config.AVOIDFOOD));
+
             }
 
             resultSet.close();

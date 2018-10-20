@@ -148,5 +148,10 @@
       </library>
     </orderEntry>
     <orderEntry type="library" name="src" level="project" />
+    <orderEntry type="library" name="mahout-core-0.7" level="project" />
+    <orderEntry type="library" name="mahout-integration-0.7" level="project" />
+    <orderEntry type="library" name="slf4j" level="project" />
+    <orderEntry type="library" name="logback-core-0.9.6" level="project" />
+    <orderEntry type="library" name="logback-classic-1.0.13" level="project" />
   </component>
 </module>

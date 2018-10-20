@@ -11,7 +11,8 @@ import org.apache.mahout.cf.taste.model.JDBCDataModel;
 import org.apache.mahout.cf.taste.recommender.RecommendedItem;
 import org.apache.mahout.cf.taste.similarity.ItemSimilarity;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class itemCF {
 
@@ -21,8 +22,6 @@ public class itemCF {
 //        for (int i=0;i<list.size();i++){
 //            System.out.println(list.get(i));
 //        }
-//
-//        System.out.println(new Date().getTime());
 //    }
 
 
@@ -30,18 +29,21 @@ public class itemCF {
      * 基于itemCF的推荐算法
      * use the MYSQL database as the input for MAHOUT
      * 传来的参数为用户的userId和正在浏览的菜品foodId
+     *
      * @param userId
      * @param foodId
      * @return
      */
-    public List getItem(String userId,String foodId) {
+    public static List getItem(String userId, String foodId) {
+        System.out.println("什么几把东西  我靠");
+
 
         String driver = "com.mysql.jdbc.Driver";
         String user = "root";
         String password = "450642604";
         String url = "jdbc:mysql://localhost:3306/project_db";
 
-        List foodList=new ArrayList();
+        List foodList = new ArrayList();
 
         try {
             Class.forName(driver);
@@ -67,21 +69,11 @@ public class itemCF {
             //给用户ID为userId推荐10个与id为foodId相似的商品
             List<RecommendedItem> recommendedItemList = recommender.recommendedBecause(Long.parseLong(userId), Long.parseLong(foodId), 10);
             //打印推荐的结果
-            System.out.println("使用基于物品的协同过滤算法");
-            System.out.println("根据用户"+userId+"当前浏览的商品"+foodId+"，推荐10个相似的商品");
+            System.out.println("使用基于物品的协同过滤算法,根据用户" + userId + "当前浏览的商品" + foodId + "，推荐10个相似的商品");
             for (RecommendedItem recommendedItem : recommendedItemList) {
                 foodList.add(recommendedItem.getItemID());
                 System.out.println(recommendedItem);
             }
-//            long start = System.currentTimeMillis();
-//            recommendedItemList = recommender.recommendedBecause(5, 34, 10);
-//            //打印推荐的结果
-//            System.out.println("使用基于物品的协同过滤算法");
-//            System.out.println("根据用户5当前浏览的商品34，推荐10个相似的商品");
-//            for (RecommendedItem recommendedItem : recommendedItemList) {
-//                System.out.println(recommendedItem);
-//            }
-//            System.out.println(System.currentTimeMillis() - start);
         } catch (TasteException e) {
             e.printStackTrace();
         }

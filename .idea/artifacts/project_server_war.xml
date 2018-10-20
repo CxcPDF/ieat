@@ -3,6 +3,15 @@
     <output-path>$USER_HOME$/Desktop/pdf</output-path>
     <root id="archive" name="project_server_war.war">
       <element id="artifact" artifact-name="project_server:war exploded" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="mahout-core-0.7" />
+          <element id="library" level="project" name="mahout-integration-0.7" />
+          <element id="library" level="project" name="slf4j" />
+          <element id="library" level="project" name="logback-core-0.9.6" />
+          <element id="library" level="project" name="logback-classic-1.0.13" />
+        </element>
+      </element>
     </root>
   </artifact>
 </component>

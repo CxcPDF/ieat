@@ -51,11 +51,12 @@ public class recommendFoodForThisUserServlet extends HttpServlet {
         String foodId=jsonObject.getString("foodId");
 
         userDAO userDAO=new userDAOimpl();
-        itemCF itemCF=new itemCF();
+//        itemCF itemCF=new itemCF();
 
         List recommendList=new ArrayList();
         for (int i=0;i<recentClickFoodList.size();i++) {
-            List list = itemCF.getItem(userId, (String) recentClickFoodList.get(i));
+//            List list = itemCF.getItem(userId, (String) recentClickFoodList.get(i));
+            List list = null;
             for (int j=0;j<list.size();j++){
                 recommendList.add(list.get(j));
             }

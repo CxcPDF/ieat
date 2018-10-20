@@ -4,6 +4,7 @@
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
          version="3.1">
 
+    <context-param> <param-name>kmRootKey</param-name> <param-value>km.root</param-value> </context-param>
     <servlet>
         <servlet-name>UserLoginServlet</servlet-name>
         <servlet-class>servlet.user.UserLoginServlet</servlet-class>
