@@ -150,45 +150,11 @@ public class ParseJSONServlet extends HttpServlet {
                 responseJSON = updateInfoServlet.getResponse(request, response);
                 System.out.println("返回数据:   " + responseJSON.toString());
                 break;
-            //测试
-//            case "test":
-//                System.out.println("test");
-////                UserInfoServlet userInfoServlet=new UserInfoServlet(object);
-////                responseJSONArray=userInfoServlet.getResponse(request,response);
-//                getUserCollectionServlet getUserCollectionServlet=new getUserCollectionServlet(object);
-//                responseJSON=getUserCollectionServlet.getResponse(request,response);
-//
-//                System.out.println("根据userId查找用户的收藏："+responseJSON.toString()+"\n");
-//
-//
-//                JSONObject jsonObject=new JSONObject();
-//                jsonObject.put("foodId",440);
-//                getFoodInfoByIdServlet getFoodInfoByIdServlet=new getFoodInfoByIdServlet(jsonObject);
-//                responseJSON=getFoodInfoByIdServlet.getResponse(request,response);
-//                System.out.println("根据foodId查找食物信息："+responseJSON.toString()+"\n");
-//
-//
-//                jsonObject.put("material","黄瓜,南瓜");
-//                getFoodByMaterialServlet getFoodByMaterialServlet=new getFoodByMaterialServlet(jsonObject);
-//                responseJSON=getFoodByMaterialServlet.getResponse(request,response);
-//                System.out.println("模糊查找食物信息："+responseJSON.toString()+"\n");
-//
-//
-//                JSONObject jsonObject = new JSONObject();
-//                jsonObject.put("material", "南瓜,黄瓜");
-//                getFoodByMaterialServlet getFoodByMaterialServlet = new getFoodByMaterialServlet(jsonObject);
-//                responseJSON = getFoodByMaterialServlet.getResponse(request, response);
-//                System.out.println(responseJSON.toString());
-//                break;
         }
 
         /**
          * 向客户端发送一个带有json对象内容的响应
          */
-        //发送出去的数据的格式为
-        // [{'foodId':'id','foodName':'name','foodMaterial':'material','imageURL':'URL'},
-        // {'foodId':'id','foodName':'name','foodMaterial':'material','imageURL':'URL'},
-        // {'foodId':'id','foodName':'name','foodMaterial':'material','imageURL':'URL'}]
         response.getOutputStream().write(responseJSON.toString().getBytes("UTF-8"));
     }
 }

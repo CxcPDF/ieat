@@ -68,7 +68,7 @@ public class flavourFilter {
      * @return
      */
     public List<Integer> doFilterByFlavour(List recommend_list){
-        List<Integer> list=new ArrayList<>();
+        List<Integer> list=new ArrayList<Integer>();
         for (int i=0;i<recommend_list.size();i++){
            int[] flavour=getFoodFlavour((Integer) recommend_list.get(i));
            if ((userFlavour[0]==0&&flavour[0]!=0)||

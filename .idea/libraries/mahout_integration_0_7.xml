@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="mahout-integration-0.7">
-    <CLASSES>
-      <root url="jar://$PROJECT_DIR$/../jar package/mahout-integration-0.7.jar!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>

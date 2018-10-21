@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="mahout-core-0.7">
-    <CLASSES>
-      <root url="jar://$PROJECT_DIR$/../jar package/mahout-core-0.7.jar!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>

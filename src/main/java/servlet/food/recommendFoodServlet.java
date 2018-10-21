@@ -71,7 +71,12 @@ public class recommendFoodServlet extends HttpServlet {
         List recommendList = new ArrayList();
         for (int i = 0; i < foodList.size(); i++) {
             System.out.println(foodList.get(i));
-            List tempList = itemCF.getItem(userId, (String) foodList.get(i));//获取到对该用户推荐的菜谱
+            List tempList = null;//获取到对该用户推荐的菜谱
+            try {
+                tempList = itemCF.getItem(userId, (String) foodList.get(i));
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
             recommendList.addAll(tempList);
         }
         List suitPeopleList = foodDAO.getSuitPeopleFood(suit_people);//推荐给特定人群的菜谱
