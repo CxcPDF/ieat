@@ -25,9 +25,7 @@ public class itemCF {
      * @return
      */
     public static List getItem(String userId, String foodId) throws Exception {
-        System.out.println("什么几把东西  我靠");
-
-
+        System.out.println("你好");
         String driver = "com.mysql.jdbc.Driver";
         String user = "root";
         String password = "450642604";

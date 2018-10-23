@@ -72,10 +72,13 @@ public class UserLoginServlet extends HttpServlet {
             String oauthAccessToken = userDAO.getAccess(account, type);
             if (oauthAccessToken != null && oauthAccessToken.equals(password)) {
                 System.out.println("登录成功！！");
+                String userId=userDAO.getUserId(account);
+
 //                responseJSON.put("notice", "登陆成功！！！");
                 JSONObject json=new JSONObject();
                 json.put(Config.NOTICE,Config.SUCCESS_TO_LOGIN);
                 json.put(Config.STATUSCODE,Config.SUCCESS);
+                json.put(Config.USERID,userId);
                 responseJSON=res.setResult(json.toString());
 
             } else {

@@ -155,6 +155,7 @@ public class ParseJSONServlet extends HttpServlet {
         /**
          * 向客户端发送一个带有json对象内容的响应
          */
+        System.out.println("返回数据"+responseJSON.toString());
         response.getOutputStream().write(responseJSON.toString().getBytes("UTF-8"));
     }
 }

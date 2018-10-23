@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: org.apache.hbase:hbase-common:1.0.0-cdh5.4.5">
+    <CLASSES>
+      <root url="jar://D:/Maven/LocalWareHouse/org/apache/hbase/hbase-common/1.0.0-cdh5.4.5/hbase-common-1.0.0-cdh5.4.5.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://D:/Maven/LocalWareHouse/org/apache/hbase/hbase-common/1.0.0-cdh5.4.5/hbase-common-1.0.0-cdh5.4.5-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://D:/Maven/LocalWareHouse/org/apache/hbase/hbase-common/1.0.0-cdh5.4.5/hbase-common-1.0.0-cdh5.4.5-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

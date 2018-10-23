@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.amazonaws:aws-java-sdk:1.7.14">
+    <CLASSES>
+      <root url="jar://D:/Maven/LocalWareHouse/com/amazonaws/aws-java-sdk/1.7.14/aws-java-sdk-1.7.14.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://D:/Maven/LocalWareHouse/com/amazonaws/aws-java-sdk/1.7.14/aws-java-sdk-1.7.14-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://D:/Maven/LocalWareHouse/com/amazonaws/aws-java-sdk/1.7.14/aws-java-sdk-1.7.14-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
