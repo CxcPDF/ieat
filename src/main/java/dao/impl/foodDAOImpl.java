@@ -73,9 +73,9 @@ public class foodDAOImpl implements foodDAO {
         String[] human = people.split(",");
         String sql = "SELECT foodId,foodName,material,image FROM food WHERE foodId IN (SELECT foodId FROM suitpeople WHERE 1=1";
         for (int i = 0; i < human.length; i++) {
-            sql += " or" + human[i] + "=1";
+            sql += " or " + human[i] + "=1";
         }
-        sql += " limit  );";
+        sql += ");";
 
 //        JSONObject json = new JSONObject();
 
@@ -120,6 +120,23 @@ public class foodDAOImpl implements foodDAO {
             e.printStackTrace();
         }
 
+        return list;
+    }
+
+    @Override
+    public List recommendFood(String sql) {
+        SQLHelper helper = new SQLHelper();
+        Connection connection=helper.getConnection();
+        List list=new ArrayList();
+        try {
+            ResultSet set=helper.queryRs(sql,helper,connection);
+            while (set.next()){
+                list.add(set.getInt("foodId"));
+            }
+            helper.close(connection);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
         return list;
     }
 }

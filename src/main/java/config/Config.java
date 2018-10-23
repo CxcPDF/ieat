@@ -38,9 +38,12 @@ public class Config {
 //    public static final String DRIVER="com.mysql.jdbc.Driver";
 
     public  static final String DRIVER="com.mysql.jdbc.Driver";
-    public  static final String USER="root";
-    public  static final String PSD="450642604";
-    public  static final String URL="jdbc:mysql://localhost:3306/project_db?useSSL=true";
+//    public  static final String USER="root";
+    public  static final String USER="ieat";
+//    public  static final String PSD="450642604";
+    public  static final String PSD="ieat2017";
+//    public  static final String URL="jdbc:mysql://localhost:3306/project_db?useSSL=true";
+    public  static final String URL="jdbc:mysql://115.159.127.223:3306/project_db?useSSL=true";
 
     /**
      * 发送给客户端的key值

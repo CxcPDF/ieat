@@ -7,4 +7,7 @@ public interface foodDAO {
     public List getSuitPeopleFood(String people);//获取适合不同用户吃的菜
 
     public List getUserClickFoodId(String userId);//获取用户在一定时间内点击的食物的foodId
+
+
+    public List recommendFood(String sql);
 }

@@ -1,6 +1,6 @@
 <component name="ArtifactManager">
   <artifact type="war" build-on-make="true" name="project_server:war">
-    <output-path>$USER_HOME$/Desktop/pdf</output-path>
+    <output-path>$USER_HOME$/Desktop/ieat</output-path>
     <root id="archive" name="project_server_war.war">
       <element id="artifact" artifact-name="project_server:war exploded" />
       <element id="directory" name="WEB-INF">

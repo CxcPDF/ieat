@@ -7,6 +7,7 @@ import dao.userDAO;
 import net.sf.json.JSONObject;
 import recommend.itemCF;
 import servlet.CommonResponse;
+import util.GetUserPreference;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -14,6 +15,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.sql.SQLException;
 import java.util.*;
 
 @WebServlet(name = "recommendFoodForThisUserServlet")
@@ -54,13 +56,20 @@ public class recommendFoodForThisUserServlet extends HttpServlet {
 //        itemCF itemCF=new itemCF();
 
         List recommendList=new ArrayList();
-        for (int i=0;i<recentClickFoodList.size();i++) {
-//            List list = itemCF.getItem(userId, (String) recentClickFoodList.get(i));
-            List list = null;
-            for (int j=0;j<list.size();j++){
-                recommendList.add(list.get(j));
-            }
+//        for (int i=0;i<recentClickFoodList.size();i++) {
+////            List list = itemCF.getItem(userId, (String) recentClickFoodList.get(i));
+//            List list = null;
+//            for (int j=0;j<list.size();j++){
+//                recommendList.add(list.get(j));
+//            }
+//        }
+        try {
+            recommendList= new GetUserPreference().getFoodId(userId);
+        } catch (SQLException e) {
+            e.printStackTrace();
         }
+
+
 //        List recommendList=itemCF.getItem(userId,foodId);
 
         StringBuilder sb=new StringBuilder();

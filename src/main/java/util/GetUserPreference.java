@@ -30,11 +30,11 @@ public class GetUserPreference {
         String sql="select foodId from collection where userId="+userId;
         ResultSet resultSet = sqlHelper.queryRs(sql, sqlHelper, connection);
         if (resultSet==null){
-            list.add("1");
-            list.add("2");
-            list.add("3");
-            list.add("4");
-            list.add("5");
+            list.add((int)Math.random()*600+"");
+            list.add((int)Math.random()*1000+"");
+            list.add((int)Math.random()*300+"");
+            list.add((int)Math.random()*400+"");
+            list.add((int)Math.random()*200+"");
             return list;
         }
         while (resultSet.next()){
