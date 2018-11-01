@@ -137,11 +137,15 @@ public class ParseJSONServlet extends HttpServlet {
                 break;
             case Config.RECOMMENDFOODFORTHISUSER://为该App的用户推荐菜品
                 System.out.println("-----------------为该App的用户推荐菜品---------------------");
-                foodDAO foodDAO = new foodDAOImpl();
-                List list = new ArrayList();
-                list = foodDAO.getUserClickFoodId(object.getString("userId"));
-                recommendFoodForThisUserServlet recommendFoodForThisUserServlet = new recommendFoodForThisUserServlet(object, list);
-                responseJSON = recommendFoodForThisUserServlet.getResponse(request, response);
+//                foodDAO foodDAO = new foodDAOImpl();
+//                List list = new ArrayList();
+//                list = foodDAO.getUserClickFoodId(object.getString("userId"));
+//                recommendFoodForThisUserServlet recommendFoodForThisUserServlet = new recommendFoodForThisUserServlet(object, list);
+//                responseJSON = recommendFoodForThisUserServlet.getResponse(request, response);
+
+                getUserCollectionServlet userCollectionServlet = new getUserCollectionServlet(object);
+                responseJSON = userCollectionServlet.getResponse(request, response);
+
                 System.out.println(responseJSON.toString());
                 break;
             case Config.UPDATEUSERIFO://更新用户信息

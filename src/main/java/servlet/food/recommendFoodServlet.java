@@ -131,7 +131,7 @@ public class recommendFoodServlet extends HttpServlet {
 
         userDAO userDAO = new userDAOimpl();
         JSONArray array=new JSONArray();
-        for (int i = 0; i < recommendList.size(); i++) {
+        for (int i = 0; i < recommendList.size()&&i<num_food; i++) {
             JSONObject jsonObject =JSONObject.fromObject(userDAO.getFoodInfoById(recommendList.get(i).toString()));
             array.add(jsonObject);
         }

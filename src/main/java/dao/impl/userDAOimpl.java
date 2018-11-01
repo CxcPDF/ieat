@@ -269,8 +269,8 @@ public class userDAOimpl implements userDAO {
         String sex = jsonObject.getString(Config.SEX);
         String suit_people = jsonObject.getString(Config.SUITPEOPLE);//特殊人群
         String avoid_food = jsonObject.getString(Config.AVOIDFOOD);//忌口食物
-        String sql="update user set height="+height+" and weight="+weight+" " +
-                "age="+age+" sex="+sex+" suit_people="+suit_people+" avoid_food="+avoid_food+" " +
+        String sql="update user set height="+height+",weight="+weight+"," +
+                "age="+age+",sex="+sex+",suit_people='"+suit_people+"',avoid_food='"+avoid_food+"' " +
                 "where userId="+userId+";";
 
         int row=0;

@@ -107,7 +107,8 @@ public class foodDAOImpl implements foodDAO {
         List list=new ArrayList();
         long nowTime=new Date().getTime();
         //找出近两个月内该用户的点击记录
-        String sql="select distinct foodId from actionpre where userId="+userId+" and timeStamp>="+(nowTime-60*24*60*60*1000)+";";
+//        String sql="select distinct foodId from actionpre where userId="+userId+" and timeStamp>="+(nowTime-60*24*60*60*1000)+";";
+        String sql="select distinct foodId from actionpre where userId="+userId+";";
         try {
             ResultSet set=helper.queryRs(sql,helper,connection);
             while (set.next()){

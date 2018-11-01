@@ -42,18 +42,10 @@ public class UserUpdateInfoServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.setCharacterEncoding("utf-8");
         response.setContentType("text/html;charset=utf-8");
-    }
-
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        request.setCharacterEncoding("utf-8");
-        response.setContentType("text/html;charset=utf-8");
-
-
-
-
         CommonResponse res = new CommonResponse();
         userDAO userDAO = new userDAOimpl();
         if (userDAO.updateUserInfo(jsonObject)){
+            System.out.println("进行更新");
             JSONObject json=new JSONObject();
             json.put(Config.NOTICE,Config.SUCCESS_TO_UPDATE);
             responseJSON=res.setResult(json.toString());
@@ -64,6 +56,11 @@ public class UserUpdateInfoServlet extends HttpServlet {
             json.put(Config.NOTICE,Config.FAIL_TO_UPDATE);
             responseJSON=res.setResult(json.toString());
         }
+    }
+
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        request.setCharacterEncoding("utf-8");
+        response.setContentType("text/html;charset=utf-8");
 
     }
 }

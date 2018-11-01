@@ -50,7 +50,7 @@ public class recommendFoodForThisUserServlet extends HttpServlet {
         response.setContentType("text/html;charset=utf-8");
 
         String userId=jsonObject.getString("userId");
-        String foodId=jsonObject.getString("foodId");
+//        String foodId=jsonObject.getString("foodId");
 
         userDAO userDAO=new userDAOimpl();
 //        itemCF itemCF=new itemCF();
