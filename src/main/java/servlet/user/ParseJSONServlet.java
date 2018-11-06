@@ -1,12 +1,9 @@
 package servlet.user;
 
 import config.Config;
-import dao.foodDAO;
-import dao.impl.foodDAOImpl;
 import net.sf.json.JSONObject;
 import servlet.food.FoodClickServlet;
 import servlet.food.getFoodByMaterialServlet;
-import servlet.food.recommendFoodForThisUserServlet;
 import servlet.food.recommendFoodServlet;
 
 import javax.servlet.ServletException;
@@ -18,8 +15,6 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * 解析App发来的json数据
@@ -43,7 +38,7 @@ public class ParseJSONServlet extends HttpServlet {
 
 
         System.out.println(request.getContentType());//得到客户端发过来内容的类型
-        System.out.println("客户端的ip地址:"+request.getRemoteAddr());//得到客户端的ip地址
+        System.out.println("客户端的ip地址:" + request.getRemoteAddr());//得到客户端的ip地址
         //使用字符流来读取客户端发来的数据
         //获取App发来的报文并将其解析成json格式
         BufferedReader br = new BufferedReader(new InputStreamReader(request.getInputStream(), "utf-8"));
@@ -159,7 +154,7 @@ public class ParseJSONServlet extends HttpServlet {
         /**
          * 向客户端发送一个带有json对象内容的响应
          */
-        System.out.println("返回数据"+responseJSON.toString());
+        System.out.println("返回数据" + responseJSON.toString());
         response.getOutputStream().write(responseJSON.toString().getBytes("UTF-8"));
     }
 }

@@ -15,6 +15,19 @@ import java.util.List;
 
 public class itemCF {
 
+    public static void main(String[] args) {
+        for (int i = 0; i < 10; i++) {
+            for (int j = 430; j < 500; j++) {
+                try {
+                    getItem(i + "", j + "");
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+
+    }
+
     /**
      * 基于itemCF的推荐算法
      * use the MYSQL database as the input for MAHOUT
@@ -25,7 +38,6 @@ public class itemCF {
      * @return
      */
     public static List getItem(String userId, String foodId) throws Exception {
-        System.out.println("你好");
         String driver = "com.mysql.jdbc.Driver";
         String user = "root";
         String password = "450642604";

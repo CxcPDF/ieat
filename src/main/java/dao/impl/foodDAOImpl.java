@@ -24,7 +24,7 @@ public class foodDAOImpl implements foodDAO {
         StringBuilder sb = new StringBuilder();
 
         String[] material = data.split(",");
-        String sql = "select foodId,foodName,material,step from food where material like '%" + material[0] + "%'";
+        String sql = "select foodId,foodName,material,step,image from food where material like '%" + material[0] + "%'";
         for (int i = 0; i < material.length; i++) {
             sql += " or material like '%" + material[i] + "%'";
         }
@@ -37,6 +37,7 @@ public class foodDAOImpl implements foodDAO {
                 jsonObject.put(Config.FOODNAME, set.getString("foodName"));
                 jsonObject.put(Config.FOODMATERIAL, set.getString("material"));
                 jsonObject.put(Config.STEP, set.getString("step"));
+                jsonObject.put(Config.IMAGEURL,set.getString("image"));
                 sb.append(jsonObject.toString()).append(",");
             }
 
